@@ -7,6 +7,7 @@
   flex-direction: column;
   align-items: center;
 }
+
 .img-name h2 {
   font-family: Fira Code;
 }
@@ -16,7 +17,7 @@
   /*Used to justify the grid container*/
   justify-items: center;
   gap: 20px;
-  padding: 20px;
+  padding: 1.25rem;
 }
 .card {
   display: flex;
@@ -25,11 +26,14 @@
   box-shadow: 3px 0px 18px 0px rgba(0, 0, 0, 0.75);
   -webkit-box-shadow: 3px 0px 18px 0px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 3px 0px 18px 0px rgba(0, 0, 0, 0.75);
-  width: calc(100vw / 5);
+  max-width: 100%;
   padding: 20px;
   border-radius: 10px;
   font-family: Poppins;
   gap: 10px;
+}
+.card p {
+  font-size: 1rem;
 }
 img {
   height: 150px;
@@ -38,7 +42,7 @@ img {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px;
+  gap: 1rem;
   text-align: center;
 }
 button {
@@ -49,4 +53,102 @@ button {
   border: none;
   background-color: rgb(37, 162, 37);
   color: white;
+}
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #734af6;
+  font-family: Poppins;
+  padding: 1rem;
+  color: white;
+}
+.links {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  align-items: center;
+  justify-items: center;
+}
+.links li {
+  list-style-type: none;
+  padding: 0.8rem;
+}
+.links li:hover {
+  background-color: black;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.search-tab {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+}
+.search-tab button {
+  background-color: black;
+  color: white;
+  padding: 0.7rem;
+}
+.search-tab input {
+  padding: calc(1rem - 10px);
+  border-radius: 10px;
+  border: none;
+  outline: none;
+}
+.brand {
+  display: flex;
+  align-items: center;
+}
+.brand img {
+  height: auto;
+  max-width: 100%;
+}
+/*
+* Media queries and rulesets
+*/
+
+/*Phones*/
+@media only screen and (min-width: 320px) and (max-width: 680px) {
+  .grid-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .card p {
+    line-height: 30px;
+    font-size: 13px;
+  }
+  .card {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .navbar {
+    display: flex;
+    flex-direction: column;
+    gap: 0.89rem;
+  }
+  .links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.89rem;
+    max-width: 100%;
+  }
+  .links li {
+    max-width: 100%;
+    text-align: center;
+  }
+}
+/*Tablets*/
+@media only screen and (min-width: 680px) and (max-width: 1024px) {
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .card {
+    max-width: 90%;
+  }
+  .card p {
+    font-size: (1rem + 10px);
+  }
+}
+@media only screen and (min-width: 1024px) and (max-width: 1440px) {
 }
