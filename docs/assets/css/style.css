@@ -45,14 +45,15 @@ img {
   gap: 1rem;
   text-align: center;
 }
-button {
-  width: 80%;
+.card button {
+  width: 40%;
   padding: 10px;
   font-family: Poppins;
   border-radius: 10px;
   border: none;
   background-color: rgb(37, 162, 37);
   color: white;
+  font-family: MonoLisa;
 }
 .navbar {
   display: flex;
@@ -62,6 +63,7 @@ button {
   font-family: Poppins;
   padding: 1rem;
   color: white;
+  font-family: MonoLisa;
 }
 .links {
   display: grid;
@@ -72,25 +74,32 @@ button {
 .links li {
   list-style-type: none;
   padding: 0.8rem;
+  font-size: 0.9rem;
 }
 .links li:hover {
   background-color: black;
   cursor: pointer;
-  border-radius: 5px;
+  border-radius: 15px;
 }
 .search-tab {
   display: flex;
   align-items: center;
-  gap: 0.625rem;
+  gap: 0.5rem;
 }
 .search-tab button {
   background-color: black;
   color: white;
-  padding: 0.7rem;
+  padding: calc(1rem - 3px);
+  font-size: calc(1rem - 3px);
+  width: 5rem;
+  border-radius: 10px;
+  border: none;
+  font-family: Jetbrains Mono;
 }
 .search-tab input {
   padding: calc(1rem - 10px);
   border-radius: 10px;
+  width: 8rem;
   border: none;
   outline: none;
 }
@@ -102,6 +111,7 @@ button {
   height: auto;
   max-width: 100%;
 }
+
 /*
 * Media queries and rulesets
 */
@@ -135,6 +145,21 @@ button {
   .links li {
     max-width: 100%;
     text-align: center;
+    font-size: 0.7rem;
+  }
+  .search-tab button {
+    padding: 8px;
+    font-size: 10px;
+    width: calc(5rem - 1rem);
+  }
+  .search-tab input {
+    width: 10rem;
+  }
+  .card button {
+    font-size: 10px;
+  }
+  .card {
+    width: 60%;
   }
 }
 /*Tablets*/
@@ -145,10 +170,31 @@ button {
   }
   .card {
     max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
   }
   .card p {
     font-size: (1rem + 10px);
   }
+  li {
+    text-align: center;
+    font-size: 0.78rem;
+  }
+  .search-tab input {
+    width: calc(100% - 10%);
+  }
+  .search-tab button {
+    width: calc(100% - 50%);
+  }
+  .card button {
+    font-size: 12px;
+  }
+  .card {
+    width: 80%;
+  }
 }
 @media only screen and (min-width: 1024px) and (max-width: 1440px) {
+  li {
+    text-align: center;
+  }
 }
